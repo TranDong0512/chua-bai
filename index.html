@@ -9,8 +9,27 @@
 </head>
 
 <body>
+    <div class="todo-container">
+        <h1>Danh Sách Công Việc</h1>
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="todoInput" placeholder="Nhập công việc mới..." />
+                <button id="actionButton" onclick="addTodo()">Thêm</button>
+                <button id="reset" onclick="reset()">Reset</button>
+            </div>
+            <div id="errorMessage" class="error-message">Vui lòng nhập công việc!</div>
+        </div>
+        <div class="filter-section">
+            <button onclick="filterTodos('all')" class="active">Tất cả</button>
+            <button onclick="filterTodos('active')">Chưa hoàn thành</button>
+            <button onclick="filterTodos('completed')">Hoàn thành</button>
+        </div>
+        <ul class="todo-list" id="todoList">
 
-    <script src="./ex02.js"></script>
+        </ul>
+    </div>
+    </div>
+    <script src="./ex03.js"></script>
 </body>
 
 </html>
