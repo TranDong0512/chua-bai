@@ -137,3 +137,7 @@ function filterTodos(status) {
 }
 actionButton.addEventListener('submit', addTodo)
 renderUI(getData())
+
+// sort theo độ khó của task
+// tìm kiếm task
+// description  = sửa chỉ sửa description ( không sửa đc title )
