@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&Dstrok;&#x1ec0; B&Agrave;I KI&#x1ec2;M TRA JAVASCRIPT - Module B - CODEFARM</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="đề-bài-kiểm-tra-javascript---module-b---codefarm">ĐỀ BÀI KIỂM TRA JAVASCRIPT - Module B - CODEFARM</h1>
+<hr>
+<p><strong>Thời gian: 120 phút</strong>
+<strong>Bài toán: Xây dựng ứng dụng web quản lý sinh viên</strong>
+<strong>Sử dụng localStorage để quản lý dữ liệu</strong>
+<strong>Chấm điểm tại lớp</strong>
+<strong>Học viên được sử dụng bootstrap để làm giao diện</strong>
+<strong>Học viên không sử dụng AI hoặc internet trong quá trình làm bài</strong></p>
+<hr>
+<h2 id="dữ-liệu-sinh-viên-dạng">Dữ liệu sinh viên dạng</h2>
+<pre><code class="language-javascript">[
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Toro&quot;</span>,
+    <span class="hljs-attr">math</span>: <span class="hljs-number">8</span>,
+    <span class="hljs-attr">english</span>: <span class="hljs-number">7</span>,
+    <span class="hljs-attr">science</span>: <span class="hljs-number">6</span>,
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">2</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Ly Tieu Long&quot;</span>,
+    <span class="hljs-attr">math</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-attr">english</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">science</span>: <span class="hljs-number">5</span>,
+  },
+  {
+    <span class="hljs-attr">id</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Donal Trump&quot;</span>,
+    <span class="hljs-attr">math</span>: <span class="hljs-number">9</span>,
+    <span class="hljs-attr">english</span>: <span class="hljs-number">9</span>,
+    <span class="hljs-attr">science</span>: <span class="hljs-number">10</span>,
+  },
+];
+</code></pre>
+<hr>
+<h2 id="yêu-cầu">Yêu cầu</h2>
+<p><strong>1. Hiển thị danh sách sinh viên (2 điểm)</strong></p>
+<ul>
+<li>Hiển thị danh sách sinh viên dưới dạng bảng</li>
+<li>Tính <strong>điểm trung bình</strong> và <strong>học lực</strong>
+<ul>
+<li>Giỏi: &gt;= 8</li>
+<li>Khá: &gt;=6.5 - 8</li>
+<li>Trung bình: &gt;=5 - 6.5</li>
+<li>Yếu: &lt; 5</li>
+</ul>
+</li>
+<li>Bảng bao gồm các thông tin: <strong>Id, Họ tên, Điểm Toán, Điểm Anh, Điểm Khoa học, Điểm trung bình, Học lực</strong> và 2 nút: <strong>&quot;Xóa&quot;</strong>, <strong>&quot;Cập nhật điểm&quot;</strong>.</li>
+</ul>
+<p><strong>2. Thêm sinh viên mới (2 điểm)</strong></p>
+<ul>
+<li>Form nhập: <strong>Họ tên, Điểm Toán, Điểm Anh, Điểm Khoa học.</strong></li>
+<li>Khi nhấn <strong>&quot;Thêm sinh viên&quot;</strong>, cập nhật danh sách.</li>
+<li><strong>Kiểm tra dữ liệu</strong> và <strong>hiển thị lỗi</strong> khi các trường không nhập đủ, đúng dữ liệu</li>
+</ul>
+<p><strong>3. Xóa sinh viên (1 điểm)</strong></p>
+<ul>
+<li>Mỗi sinh viên có nút <strong>&quot;Xóa&quot;</strong> tương ứng, cập nhật danh sách.</li>
+<li>Sau khi xóa thành cồng hiển thông báo alert</li>
+</ul>
+<p><strong>4. Cập nhật điểm sinh viên (2 điểm)</strong></p>
+<ul>
+<li>Nút <strong>&quot;Cập nhật điểm&quot;</strong> mở input chỉnh sửa được các đầu điểm của sinh viên (lựu ý: không thể cập nhật tên sinh viên).</li>
+<li>Nhấn <strong>&quot;Lưu&quot;</strong>, tính lại điểm trung bình, học lực và cập nhật lại giao diện</li>
+</ul>
+<p><strong>5. Tìm kiếm sinh viên theo tên (1 điểm)</strong></p>
+<ul>
+<li>Ô input <strong>tìm kiếm</strong> sẽ lọc danh sách theo tên (không phân biệt hoa thường).</li>
+</ul>
+<p><strong>6. Sắp xếp sinh viên (1 điểm)</strong></p>
+<ul>
+<li><strong>Dropdown (select-option)</strong> chọn sắp xếp theo <strong>Điểm trung bình (Cao → Thấp, Thấp → Cao)</strong> hoặc huỷ sắp xếp.</li>
+</ul>
+<p><strong>7. Lọc sinh viên theo học lực (1 điểm)</strong></p>
+<ul>
+<li><strong>Dropdown (select-option)</strong> lọc theo <strong>Giỏi, Khá, Trung bình, Yếu</strong>.</li>
+</ul>
+<hr>
+<h2 id="tổng-kết-10-điểm">Tổng kết (10 điểm)</h2>
+<ul>
+<li>Hiển thị danh sách (2đ)</li>
+<li>Thêm sinh viên (2đ)</li>
+<li>Xóa sinh viên (1đ)</li>
+<li>Cập nhật điểm (2đ)</li>
+<li>Tìm kiếm (1đ)</li>
+<li>Sắp xếp (1đ)</li>
+<li>Lọc học lực (1đ)</li>
+</ul>
+<p><strong>Chúc các bạn làm bài tốt!!!</strong></p>
+
+            
+            
+        </body>
+        </html>

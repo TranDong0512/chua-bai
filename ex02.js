@@ -37,29 +37,29 @@
 //     })
 // })
 
-function getUser(userId) {
-    return new Promise((resolve, reject) => {
-        resolve({ id: userId, name: "John", age: 30 })
-    })
-}
-function getPurchases(userId) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([
-                { id: 1, userId: userId, product: "Laptop", price: 1000 },
-                { id: 2, userId: userId, product: "Phone", price: 2000 },
-            ])
-        }, 1000)
-    })
-}
+// function getUser(userId) {
+//     return new Promise((resolve, reject) => {
+//         resolve({ id: userId, name: "John", age: 30 })
+//     })
+// }
+// function getPurchases(userId) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve([
+//                 { id: 1, userId: userId, product: "Laptop", price: 1000 },
+//                 { id: 2, userId: userId, product: "Phone", price: 2000 },
+//             ])
+//         }, 1000)
+//     })
+// }
 
-function getProductDetails(product) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve({ id: product.id, name: product.product, price: product.price })
-        }, 1000)
-    })
-}
+// function getProductDetails(product) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve({ id: product.id, name: product.product, price: product.price })
+//         }, 1000)
+//     })
+// }
 
 // getUser(1)
 //     .then((user) => {
@@ -107,24 +107,26 @@ function getProductDetails(product) {
 // }
 // main()
 
-async function runWithAsyncAwait() {
-    console.log(" Bài 3: Async/Await ");
-    const user = await getUserPromise(1);
-    console.log("User:", user);
+// async function runWithAsyncAwait() {
+//     console.log(" Bài 3: Async/Await ");
+//     const user = await getUserPromise(1);
+//     console.log("User:", user);
 
-    const purchases = await getPurchasesPromise(user.id);
-    console.log("Purchases:", purchases);
+//     const purchases = await getPurchasesPromise(user.id);
+//     console.log("Purchases:", purchases);
 
-    const details = await Promise.all(
-        purchases.map((p) =>
-            getProductDetailsPromise(p.id, p.product, p.price)
-        )
-    );
-    console.log("Product Details:", details);
+//     const details = await Promise.all(
+//         purchases.map((p) =>
+//             getProductDetailsPromise(p.id, p.product, p.price)
+//         )
+//     );
+//     console.log("Product Details:", details);
 
-    const total = details.reduce((sum, item) => sum + item.price, 0);
-    console.log("Total price:", total);
-}
+//     const total = details.reduce((sum, item) => sum + item.price, 0);
+//     console.log("Total price:", total);
+// }
 
-// Chạy thử
-setTimeout(runWithAsyncAwait, 8000);
+// // Chạy thử
+// setTimeout(runWithAsyncAwait, 8000);
+
+alert("Hello World!")
